@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangan Murah | Penyelamat Pangan Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#0F172A] text-slate-200" id="app">
+
+    <nav class="sticky top-0 z-50 bg-[#0F172A]/90 backdrop-blur-md border-b border-white/5">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight text-white">
+                Pangan<span class="text-green-500">Murah</span>
+            </div>
+
+            <ul class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <li><a href="#features" class="hover:text-green-500 transition">Fitur</a></li>
+                <li><a href="map.html" class="hover:text-green-500 transition">Jelajahi Peta</a></li>
+                <li><a href="partnership.html" class="hover:text-green-500 transition">Kemitraan</a></li>
+            </ul>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="login.html" class="text-sm font-semibold hover:text-green-500 transition">Masuk</a>
+                <a href="register.html" class="bg-green-600 hover:bg-green-500 px-5 py-2.5 rounded-xl text-sm font-bold text-white transition shadow-lg shadow-green-900/20">Daftar Gratis</a>
+            </div>
+
+            <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-white text-2xl focus:outline-none">
+                <span v-if="!isMenuOpen">☰</span>
+                <span v-else>✕</span>
+            </button>
+        </div>
+
+        <div v-show="isMenuOpen" class="md:hidden bg-[#1E293B] border-b border-white/5 px-6 py-6 space-y-4">
+            <a href="#features" class="block text-slate-300">Fitur</a>
+            <a href="map.html" class="block text-slate-300">Jelajahi Peta</a>
+            <a href="partnership.html" class="block text-slate-300">Kemitraan</a>
+            <hr class="border-white/5">
+            <a href="login.html" class="block text-green-500 font-bold">Masuk</a>
+            <a href="register.html" class="block bg-green-600 text-center py-3 rounded-xl font-bold text-white">Daftar Gratis</a>
+        </div>
+    </nav>
+
+    <section class="container mx-auto px-6 py-16 md:py-28 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-3/5 text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white mb-6">
+                Nikmati Makanan Enak, <br>
+                <span class="text-orange-500">Hemat Kantong,</span> <br>
+                Selamatkan Bumi.
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-xl mx-auto md:mx-0">
+                Dapatkan akses ke makanan berkualitas dari bakery & resto favoritmu dengan harga mulai dari <span class="text-white font-semibold">Rp10.000</span>.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#" class="bg-green-600 hover:bg-green-500 px-8 py-4 rounded-2xl text-lg font-bold text-white transition-all transform hover:-translate-y-1 shadow-xl shadow-green-900/40">
+                    Amankan Makanan Sekarang
+                </a>
+            </div>
+        </div>
+        
+        <div class="md:w-2/5 relative">
+            <div class="absolute -top-6 -right-6 bg-orange-500 text-white px-6 py-3 rounded-full font-black text-xl rotate-12 shadow-lg z-10">
+                -70%
+            </div>
+            <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&w=800&q=80" 
+                 alt="Food App" 
+                 class="rounded-[2.5rem] border-8 border-slate-800 shadow-2xl">
+        </div>
+    </section>
+
+    <section id="features" class="bg-[#080D1A] py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 text-white">Kenapa Harus Pangan Murah?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#1E293B] p-8 rounded-3xl border border-white/5 hover:border-green-500/50 transition group">
+                    <div class="text-4xl mb-6 group-hover:scale-110 transition duration-300">💰</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Diskon Melimpah</h3>
+                    <p class="text-slate-400">Hemat pengeluaran makan hingga 70% setiap hari dengan sistem Mystery Bag yang seru.</p>
+                </div>
+                <div class="bg-[#1E293B] p-8 rounded-3xl border border-white/5 hover:border-green-500/50 transition group">
+                    <div class="text-4xl mb-6 group-hover:scale-110 transition duration-300">🌍</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Penyelamat Bumi</h3>
+                    <p class="text-slate-400">Setiap makanan yang kamu beli membantu mengurangi limbah makanan dan jejak karbon.</p>
+                </div>
+                <div class="bg-[#1E293B] p-8 rounded-3xl border border-white/5 hover:border-green-500/50 transition group">
+                    <div class="text-4xl mb-6 group-hover:scale-110 transition duration-300">📍</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Lokasi Terdekat</h3>
+                    <p class="text-slate-400">Cari promo makanan di sekitarmu dengan peta interaktif yang akurat secara real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-20 bg-[#080D1A]">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8 items-stretch">
+            
+            <div class="bg-[#1E293B] p-10 rounded-[2.5rem] border border-white/5 shadow-2xl flex flex-col justify-center">
+                <p class="text-xl md:text-2xl italic text-slate-200 leading-relaxed mb-8">
+                    "Sebagai mahasiswa yang tinggal di Cipatat, aplikasi ini bener-bener penyelamat akhir bulan! Makanannya masih fresh, enak, dan harganya gak masuk akal murahnya."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-500 font-bold">
+                        I
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg">— Indah</h4>
+                        <p class="text-green-500 text-sm">Mahasiswa & Food Rescue Hero</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#1E293B] p-10 rounded-[2.5rem] border border-white/5 shadow-2xl flex flex-col justify-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Mau info promo terbaru?</h2>
+                <p class="text-slate-400 mb-8 text-lg">
+                    Bergabunglah dengan <span class="text-white font-semibold">1.000+ pahlawan pangan</span> lainnya untuk dapetin notif makanan murah setiap hari.
+                </p>
+                
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" 
+                           placeholder="Masukkan email kamu..." 
+                           class="flex-1 bg-[#0F172A] border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-green-500 transition">
+                    <button type="submit" 
+                            class="bg-green-600 hover:bg-green-500 px-8 py-4 rounded-2xl font-bold text-white transition transform hover:scale-105 shadow-lg shadow-green-900/20">
+                        Gabung Sekarang
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <footer class="py-12 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-xl font-bold text-white mb-4">Pangan<span class="text-green-500">Murah</span></div>
+            <p class="text-slate-500 text-sm mb-8">© 2026 Kelompok 2 UT. Dibuat dengan ❤️ di Cipatat.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-slate-400 hover:text-white">Instagram</a>
+                <a href="#" class="text-slate-400 hover:text-white">Twitter</a>
+                <a href="#" class="text-slate-400 hover:text-white">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const { createApp, ref } = Vue;
+        createApp({
+            setup() {
+                const isMenuOpen = ref(false);
+                return { isMenuOpen };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
