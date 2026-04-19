@@ -6,7 +6,7 @@
     <title>Pangan Murah | Penyelamat Pangan Indonesia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body class="bg-[#0F172A] text-slate-200 overflow-x-hidden" id="app">
@@ -19,13 +19,13 @@
 
             <ul class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
                 <li><a href="#features" class="hover:text-green-500 transition">Fitur</a></li>
-                <li><a href="map.html" class="hover:text-green-500 transition">Jelajahi Peta</a></li>
-                <li><a href="partnership.html" class="hover:text-green-500 transition">Kemitraan</a></li>
+                <li><a href="page/map.html" class="hover:text-green-500 transition">Jelajahi Peta</a></li>
+                <li><a href="page/partnership.html" class="hover:text-green-500 transition">Kemitraan</a></li>
             </ul>
 
             <div class="hidden md:flex items-center space-x-4">
-                <a href="login.html" class="text-sm font-semibold hover:text-green-500 transition">Masuk</a>
-                <a href="register.html" class="bg-green-600 hover:bg-green-500 px-5 py-2.5 rounded-xl text-sm font-bold text-white transition shadow-lg shadow-green-900/20">Daftar Gratis</a>
+                <a href="page/login.html" class="text-sm font-semibold hover:text-green-500 transition">Masuk</a>
+                <a href="page/register.html" class="bg-green-600 hover:bg-green-500 px-5 py-2.5 rounded-xl text-sm font-bold text-white transition shadow-lg shadow-green-900/20">Daftar Gratis</a>
             </div>
 
             <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-white text-2xl focus:outline-none">
@@ -36,11 +36,11 @@
 
         <div v-show="isMenuOpen" class="md:hidden absolute top-full left-0 w-full bg-[#1E293B] border-b border-white/5 px-6 py-6 space-y-4 shadow-2xl">
             <a href="#features" @click="isMenuOpen = false" class="block text-slate-300 hover:text-green-500 transition">Fitur</a>
-            <a href="map.html" class="block text-slate-300 hover:text-green-500 transition">Jelajahi Peta</a>
-            <a href="partnership.html" class="block text-slate-300 hover:text-green-500 transition">Kemitraan</a>
+            <a href="page/map.html" class="block text-slate-300 hover:text-green-500 transition">Jelajahi Peta</a>
+            <a href="page/partnership.html" class="block text-slate-300 hover:text-green-500 transition">Kemitraan</a>
             <hr class="border-white/5">
-            <a href="login.html" class="block text-green-500 font-bold hover:text-green-400 transition">Masuk</a>
-            <a href="register.html" class="block bg-green-600 text-center py-3 rounded-xl font-bold text-white shadow-lg shadow-green-900/20 active:scale-95 transition">Daftar Gratis</a>
+            <a href="page/login.html" class="block text-green-500 font-bold hover:text-green-400 transition">Masuk</a>
+            <a href="page/register.html" class="block bg-green-600 text-center py-3 rounded-xl font-bold text-white shadow-lg shadow-green-900/20 active:scale-95 transition">Daftar Gratis</a>
         </div>
     </nav>
 
@@ -168,8 +168,8 @@
                     <ul class="space-y-4">
                         <li><a href="#" class="text-slate-400 hover:text-green-400 hover:pl-2 transition-all duration-300 flex items-center"><span class="mr-2 text-green-500/50">›</span>Tentang Pangan Murah</a></li>
                         <li><a href="#features" class="text-slate-400 hover:text-green-400 hover:pl-2 transition-all duration-300 flex items-center"><span class="mr-2 text-green-500/50">›</span>Keunggulan Fitur</a></li>
-                        <li><a href="map.html" class="text-slate-400 hover:text-green-400 hover:pl-2 transition-all duration-300 flex items-center"><span class="mr-2 text-green-500/50">›</span>Eksplorasi Peta</a></li>
-                        <li><a href="partnership.html" class="text-slate-400 hover:text-green-400 hover:pl-2 transition-all duration-300 flex items-center"><span class="mr-2 text-green-500/50">›</span>Bergabung Kemitraan</a></li>
+                        <li><a href="page/map.html" class="text-slate-400 hover:text-green-400 hover:pl-2 transition-all duration-300 flex items-center"><span class="mr-2 text-green-500/50">›</span>Eksplorasi Peta</a></li>
+                        <li><a href="page/partnership.html" class="text-slate-400 hover:text-green-400 hover:pl-2 transition-all duration-300 flex items-center"><span class="mr-2 text-green-500/50">›</span>Bergabung Kemitraan</a></li>
                     </ul>
                 </div>
                 
